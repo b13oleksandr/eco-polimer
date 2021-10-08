@@ -1,0 +1,57 @@
+.section-own-equipment
+  background-color $color-primary
+  padding-bottom 123px
+  &__title
+    margin-bottom 8px
+  &__desc
+    margin-bottom 12px
+    font-weight 600
+    font-size 17px
+    line-height 21px
+  &__product-img
+    max-height 183px
+    margin-bottom 8px
+  &__product-name
+    font-weight 600
+    font-size 23px
+    line-height 29px
+  &__product-short-desc
+    font-weight 600
+    font-size 16px
+    line-height 20px
+    margin-bottom 24px
+  &__product-desc
+    color $color-grey
+  &__product-complectation
+    margin-top 40px
+  &__characteristics
+    margin-bottom 24px
+    margin-top 16px
+  &__feature
+    &::before
+      content ''
+      display inline-flex
+      width 17px
+      height 14px
+      background url("../statics/icons/check.svg") center / contain
+      margin-right 20px
+    &:not(:last-child)
+      margin-bottom 16px
+
+.product-complaectation-item
+  text-align center
+  &__img
+    max-width 107px
+  &__name
+    color $color-grey
+    margin-top 16px
+
+.product-characteristics
+  &__row
+    display flex
+  &__label
+    color $color-grey
+    width 220px
+  &__value
+    font-weight bold
+

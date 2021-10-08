@@ -1,0 +1,210 @@
+$color-black = #181818
+$color-primary = #CFF08F
+$color-accent = #8BC34A
+$color-light-green = #E1EDCA
+$color-grey = #5A5A5A
+$color-dark-grey = #333333
+
+@import "grid.styl"
+
+*
+  box-sizing border-box
+
+body
+  font-family: Montserrat, sans-serif;
+  padding 0
+  margin 0
+  font-weight 500
+  font-size 16px
+  line-height 20px
+  color $color-black
+
+img
+  max-width 100%
+  vertical-align bottom
+
+a
+  text-decoration none
+  color $color-black
+
+label
+  font-size 16px
+  line-height 20px
+  margin-bottom 8px
+  display block
+
+input[type=range] {
+  -webkit-appearance none
+  width 100%
+  padding 0
+  margin 0
+}
+input[type=range]:focus {
+  outline none
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width 100%
+  height 6px
+  cursor pointer
+  background $color-light-green
+  border-radius 3px
+}
+input[type=range]::-webkit-slider-thumb {
+  height 16px
+  width 16px
+  border-radius 50%
+  background $color-accent
+  cursor pointer
+  -webkit-appearance none
+  margin-top -5px
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+}
+input[type=range]::-moz-range-track {
+  width 100%
+  height 6px
+  cursor pointer
+  background $color-light-green
+  border-radius 3px
+}
+input[type=range]::-moz-range-thumb {
+  border none
+  height 16px
+  width 16px
+  border-radius 50%
+  background $color-accent
+  cursor pointer
+}
+input[type=range]::-ms-track {
+  width 100%
+  height 6px
+  cursor pointer
+  background $color-light-green
+  border-color white
+  border-width 8px 0
+  color transparent
+}
+input[type=range]::-ms-fill-lower {
+  background $color-accent
+  border-radius 3px
+}
+input[type=range]::-ms-fill-upper {
+  background $color-light-green
+  border-radius: 3px;
+}
+input[type=range]::-ms-thumb {
+  border none
+  height 16px
+  width 16px
+  border-radius: 50%
+  background: $color-accent
+  cursor: pointer
+}
+
+
+.main
+  background url("../statics/images/bg.png") no-repeat
+  background-position calc(50% + 37px) 13px
+
+.container
+  max-width 1312px
+  padding 0 16px
+  width 100%
+  margin 0 auto
+
+.button
+  background-color $color-accent
+  border-radius 10px
+  outline none
+  border none
+  height 50px
+  padding 0 22px
+  font-size 18px
+  line-height 22px
+  text-align center
+  color #fff
+  cursor pointer
+
+.text-field
+  border-radius 10px
+  background-color: #fff
+  height 50px
+  outline none
+  padding 0 24px
+  color #B4B4B4
+  border 2px solid #AEAEAE
+  width 100%
+  &--no-bordered
+    border none
+
+.section
+  padding 96px 0
+
+.section-item
+  &__icon
+    margin-bottom 24px
+  &__title
+    margin-bottom 16px
+    font-weight 600
+    font-size 17px
+    line-height 21px
+  &__text
+    color $color-grey
+
+
+.title
+  font-weight bold
+  font-size 32px
+  line-height 39px
+  margin 0
+  color $color-black
+
+.carousel-nav
+  display flex
+  &--vertical
+    flex-direction column
+    .carousel-nav__btn--prev
+      margin-right initial
+      margin-bottom 20px
+  &__btn
+    width 50px
+    height 50px
+    border 2px solid #8BC34A
+    border-radius 10px
+    background center no-repeat
+    margin-right 20px
+    outline none
+    cursor pointer
+    &--prev
+      background-image url('../statics/images/arrow-left.svg')
+    &--next
+      background-image url('../statics/images/arrow-right.svg')
+
+@import "contact-item.styl"
+@import "accordion.styl"
+@import "contacts-bar.styl"
+
+@import "header.styl"
+@import "section-carousel.styl"
+@import "section-production-line.styl"
+@import "section-representation.styl"
+@import "section-consultation.styl"
+@import "section-gallery.styl"
+@import "section-own-technology.styl"
+@import "section-video.styl"
+@import "section-cooperation.styl"
+@import "section-calculator.styl"
+@import "section-eco-business.styl"
+@import "section-parter-products.styl"
+@import "section-own-equipment.styl"
+@import "section-recycle.styl"
+@import "section-production-advantages.styl"
+@import "section-subscribe.styl"
+@import "section-production-start.styl"
+@import "section-you-get.styl"
+@import "section-production-steps.styl"
+@import "section-faq.styl"
+@import "section-team.styl"
+@import "section-more-about-us.styl"
+
+@import "footer.styl"

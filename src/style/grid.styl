@@ -1,0 +1,22 @@
+$breakpoints = 320 580 768 900 992 1024 1200 1366 1440 1680 1920
+$column-count = 12
+
+.grid
+  display: flex
+  flex-wrap: wrap
+
+  .col
+    width: 100%
+
+    for $breakpoint in $breakpoints
+      @media (min-width: $breakpoint px)
+        for $i in (1..$column-count)
+          &.sc-{$breakpoint}-{$i}
+            width: 'calc(100% * %s)' % ($i / $column-count)
+
+  &--gutter-16
+    margin: -8px
+
+    .col
+      padding: 8px
+

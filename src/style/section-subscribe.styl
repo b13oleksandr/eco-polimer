@@ -1,0 +1,52 @@
+.section-subscribe
+  background-color $color-primary
+  padding-bottom 30px
+  &__title
+    margin-bottom 48px
+  &__item
+    height 100%
+  &__subscribe-btn
+    margin-top 24px
+
+.subscribe-item
+  display flex
+  flex-direction column
+  align-items flex-start
+  padding-bottom 56px
+  &__content
+    flex 1
+
+.subscribe-button
+  height 50px
+  padding 0 40px
+  border 2px solid #8BC34A
+  box-shadow 0 4px 10px rgba(0, 0, 0, 0.1)
+  border-radius 10px
+  background-color #fff
+  color $color-accent
+  display inline-flex
+  align-items center
+  outline none
+  font-size 18px
+  line-height 21px
+  &::before
+    content ''
+    width 24px
+    height 24px
+    margin-right 16px
+    background center no-repeat
+  &--instagram
+    &::before
+      background-image url("../statics/images/subscribe/instagram.svg")
+  &--telegram
+    &::before
+      background-image url("../statics/images/subscribe/telegram.svg")
+  &--youtube
+    &::before
+      background-image url("../statics/images/subscribe/youtube.svg")
+  &--facebook
+    &::before
+      background-image url("../statics/images/subscribe/facebook.svg")
+  &--viber
+    &::before
+      background-image url("../statics/images/subscribe/viber.svg")

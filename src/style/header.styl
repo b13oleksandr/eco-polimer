@@ -1,0 +1,25 @@
+.header
+  padding-bottom 24px
+  &__header-top
+    margin-bottom 16px
+  &__header-contacts
+    @media screen and (max-width 767px)
+      display none
+
+
+.header-top
+  padding 16px 0
+  background-color $color-primary
+
+.header-bottom
+  display flex
+  align-items center
+  justify-content space-between
+
+.nav
+  display flex
+  &__item
+    font-size 18px
+    line-height 22px
+    &:not(:last-child)
+      margin-right 24px

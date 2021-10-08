@@ -1,0 +1,23 @@
+.section-video
+  height 500px
+  background url('../statics/images/video/bg.png') center / cover
+  position relative
+  text-align center
+  display flex
+  align-items flex-end
+  &::before
+    content ''
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    background-color: rgba(0, 0, 0, 0.4)
+  &__content
+    position relative
+    margin-bottom 115px
+  &__title
+    color #fff
+  &__play
+    margin-bottom 48px
+    cursor pointer

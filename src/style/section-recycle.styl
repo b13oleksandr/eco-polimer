@@ -1,0 +1,65 @@
+.section-recycle
+  padding-bottom 69px
+  &__process
+    display flex
+  &__recycle
+    display flex
+    position relative
+  &__products
+    display flex
+    justify-content space-between
+    margin-left 22px
+    flex 1
+    align-self flex-start
+  &__arrow
+    position absolute
+    right -68px
+    top -112px
+
+.recycle-header
+  box-shadow: 0 0 12px rgba(95, 95, 95, 0.24)
+  padding 31px 95px 31px 44px
+  width 1064px
+  max-width 100%
+  margin -50px auto 110px
+  display flex
+  background-color #fff
+  &__icon
+    width 64px
+    margin-right 24px
+  &__text
+    font-weight 600
+    font-size 17px
+    line-height 21px
+
+.recycle-raw-item
+  margin-right 24px
+  &__qnt
+    margin-bottom 16px
+    font-weight bold
+    font-size 64px
+    line-height 78px
+    color $color-accent
+  &--kg
+    max-width 248px
+  &--trash
+    max-width 294px
+  &--plastic
+    max-width 320px
+
+.recycle-product-item
+  text-align center
+  display flex
+  flex-direction column
+  &__qnt
+    font-weight 600
+    font-size 17px
+    line-height 21px
+    color $color-accent
+    margin-bottom 16px
+    white-space nowrap
+  &__img-wrap
+    margin-top 24px
+    flex 1
+    display flex
+    align-items flex-end
