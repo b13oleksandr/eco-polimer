@@ -116,7 +116,7 @@ input[type=range]::-ms-thumb {
   background-color $color-accent
   border-radius 10px
   outline none
-  border none
+  border 2px solid $color-accent
   height 50px
   padding 0 22px
   font-size 18px
@@ -124,6 +124,14 @@ input[type=range]::-ms-thumb {
   text-align center
   color #fff
   cursor pointer
+  transition .3s
+  font-style normal
+  font-weight 500
+  font-family 'Montserrat', sans-serif
+
+  &:hover
+    background-color transparent
+    color $color-accent
 
 .text-field
   border-radius 10px
