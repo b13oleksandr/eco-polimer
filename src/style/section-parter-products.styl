@@ -1,11 +1,14 @@
 .section-partner-products
   padding-bottom 72px
+  @media screen and (max-width 767px)
+    padding-bottom 30px
   &__carousel-wrap
-    //padding-right 108px
     display flex
     align-items center
   &__carousel-nav
     margin-left 58px
+    @media screen and (max-width 767px)
+      display none
   &__data
     display flex
     flex-direction column
@@ -14,6 +17,8 @@
     flex 1
     display flex
     align-items center
+    @media screen and (max-width 1199px)
+      margin-top 16px
 
 .partner-products-block
   height 500px
@@ -24,9 +29,19 @@
   background #A7CC40
   padding-right 50px
   padding-left 26px
+  @media screen and (max-width 579px)
+    display block
+    height auto
+    padding-bottom 24px
+
   &__img
     max-width 315px
     margin-right 42px
+    @media screen and (max-width 991px)
+      max-width 280px
+      margin-right 24px
+    @media screen and (max-width 579px)
+      max-width 315px
   &__header
     margin-bottom 48px
   &__title

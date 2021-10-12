@@ -18,6 +18,7 @@ body
   font-size 16px
   line-height 20px
   color $color-black
+  overflow-x hidden
 
 img
   max-width 100%
@@ -128,10 +129,10 @@ input[type=range]::-ms-thumb {
   font-style normal
   font-weight 500
   font-family 'Montserrat', sans-serif
-
-  &:hover
-    background-color transparent
-    color $color-accent
+  @media screen and (min-width 1024px)
+    &:hover
+      background-color transparent
+      color $color-accent
 
 .text-field
   border-radius 10px
@@ -166,6 +167,9 @@ input[type=range]::-ms-thumb {
   line-height 39px
   margin 0
   color $color-black
+  @media screen and (max-width 767px)
+    font-size 22px
+    line-height 29px
 
 .carousel-nav
   display flex
@@ -188,6 +192,23 @@ input[type=range]::-ms-thumb {
     &--next
       background-image url('../statics/images/arrow-right.svg')
 
+.mobile-nav
+  position absolute
+  background #fff
+  width 100%
+  z-index 9999999
+  overflow hidden
+  height 0
+  transition: height .3s;
+  &__inner
+    padding 16px
+  .nav
+    flex-direction column
+    &__item
+      margin-bottom 8px
+
+
+@import "hamburger.styl"
 @import "contact-item.styl"
 @import "accordion.styl"
 @import "contacts-bar.styl"

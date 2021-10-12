@@ -9,11 +9,33 @@
 
   <div class="container">
     <div class="header-bottom">
-      <img src="../../../statics/images/logo.svg" alt="">
+      <img class="header__logo" src="../../../statics/images/logo.svg" alt="">
 
+      <div class="header__nav">
+        {{> navigation }}
+      </div>
+
+      <div class="header__buttons">
+        <button class="button header__phone-button">
+        <span class="header__phone-text">
+          Замовити дзвінок
+        </span>
+        </button>
+
+        <label for="hamburger" class="hamburger header__hamburger js-hamburger">
+          <input class="hamburger__check" type="checkbox" id="hamburger"/>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </label>
+<!--        <button class="header__hamburger js-hamburger"></button>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-nav js-mobile-nav" data-collapsed>
+    <div class="mobile-nav__inner js-mobile-nav-inner">
       {{> navigation }}
-
-      <button class="button">Замовити дзвінок</button>
     </div>
   </div>
 </header>

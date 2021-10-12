@@ -23,9 +23,15 @@
 .calculator-total
   padding 24px
   background-color $color-primary
+  @media screen and (max-width 1199px)
+    display flex
+  @media screen and (max-width 767px)
+    display block
   &__row
     margin-bottom 30px
     display flex
+    @media screen and (max-width 1199px)
+      flex 1
     &--no-margin
       margin-bottom 0
   &__col-text
@@ -50,3 +56,4 @@
     margin-bottom 24px
   &__button
     width 307px
+    max-width 100%

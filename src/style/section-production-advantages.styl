@@ -2,20 +2,30 @@
   background-color $color-primary
   &__wrap
     padding-left 91px
+    @media screen and (max-width 1199px)
+      padding-left 0
   &__title
     max-width 695px
     margin-bottom 36px
   &__content
     display flex
+    @media screen and (max-width 1199px)
+      flex-wrap wrap
   &__img
     max-width 583px
     margin-top 16px
     margin-right 118px
+    @media screen and (max-width 1199px)
+      //max-width 100%
+      margin-right 0
+      margin-bottom 32px
+      width 100%
 
 .production-advantages-item
   display flex
-  margin-bottom 54px
   align-items center
+  &:not(:last-child)
+    margin-bottom 54px
   &__icon
     margin-right 16px
     margin-top -32px

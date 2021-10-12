@@ -2,18 +2,31 @@
   padding-top 43px
   &__title
     max-width 508px
+    margin-right 16px
+    @media screen and (max-width 1199px)
+      margin-bottom 16px
+    @media screen and (max-width 767px)
+      max-width initial
   &__content
     display flex
     justify-content space-between
+    @media screen and (max-width 1199px)
+      flex-direction column
   &__items
     display flex
+    @media screen and (max-width 579px)
+      flex-direction column
+  &__item
+    @media screen and (min-width 580px)
+      &:not(:last-child)
+        margin-right 16px
+    @media screen and (max-width 767px)
+      max-width initial
+      margin-bottom 16px
+
 
 .production-line-item
   max-width 230px
-  &__value
-    font-weight bold
-    font-size 32px
-    line-height 39px
   &__text
     font-weight 600
     font-size 17px

@@ -1,11 +1,43 @@
 .header
   padding-bottom 24px
+  @media screen and (max-width 1199px)
+    padding-top 24px
   &__header-top
     margin-bottom 16px
+    @media screen and (max-width 1199px)
+      display none
   &__header-contacts
     @media screen and (max-width 767px)
       display none
-
+  &__phone-button
+    display flex
+    align-items center
+    white-space nowrap
+    &::before
+      background url("../statics/images/phone.svg") center/contain no-repeat
+      width 24px
+      height 24px
+      color white
+      @media screen and (max-width 1199px)
+        content ''
+  &__phone-text
+    @media screen and (max-width 1199px)
+      display none
+  &__nav
+    @media screen and (max-width 1199px)
+      display none
+  &__hamburger
+    margin-left 16px
+    @media screen and (min-width 1200px)
+      display none
+  &__buttons
+    display flex
+    align-items center
+  &__logo
+    @media screen and (max-width 579px)
+      max-width 180px
+    @media screen and (max-width 359px)
+      max-width 160px
 
 .header-top
   padding 16px 0

@@ -2,19 +2,41 @@
   padding-bottom 69px
   &__process
     display flex
+    overflow hidden
+    @media screen and (max-width 767px)
+      flex-direction column
   &__recycle
     display flex
     position relative
+    @media screen and (max-width 579px)
+      flex-direction column
   &__products
     display flex
     justify-content space-between
     margin-left 22px
     flex 1
     align-self flex-start
+    @media screen and (max-width 767px)
+      margin-top 48px
+      margin-left 0
+      width 100%
+      max-width 400px
   &__arrow
     position absolute
     right -68px
     top -112px
+    @media screen and (max-width 767px)
+      top initial
+      right 29px
+      bottom -180px
+      transform rotate(145deg)
+    @media screen and (max-width 579px)
+      right -32px
+      bottom -19px
+      transform rotate(55deg)
+  &__product-item
+    &:not(:last-child)
+      margin-right 16px
 
 .recycle-header
   box-shadow: 0 0 12px rgba(95, 95, 95, 0.24)
@@ -24,8 +46,12 @@
   margin -50px auto 110px
   display flex
   background-color #fff
+  align-items center
+  @media screen and (max-width 579px)
+    padding 31px 16px 31px 16px
   &__icon
     width 64px
+    //min-width 64px
     margin-right 24px
   &__text
     font-weight 600
