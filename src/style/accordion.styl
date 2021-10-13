@@ -1,5 +1,7 @@
 .accordion
   overflow hidden
+  transition height .3s
+
   &__header
     display flex
     align-items center
@@ -20,8 +22,6 @@
       top 50%
       margin-top -12px
       transition .3s
-  /*&__content
-    overflow hidden*/
   &__content-inner
     padding 0 87px 22px 53px
     color $color-grey

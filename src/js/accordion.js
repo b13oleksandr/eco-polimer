@@ -12,36 +12,23 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!toggle || !content) return
 
       const headerHeight = toggle.offsetHeight
-      const contentHeight = content.offsetHeight
-      const { dataset: { collapsed } } = accordion
+      const {dataset: {collapsed}} = accordion
       if (collapsed !== undefined) {
         accordion.style.height = headerHeight + 'px'
       }
 
       toggle.addEventListener('click', () => {
-        accordion.toggleAttribute('data-collapsed')
-        const { dataset: { collapsed } } = accordion
+        const {dataset: {collapsed}} = accordion
+        const headerHeight = toggle.offsetHeight
+        const contentHeight = content.offsetHeight
 
         if (collapsed !== undefined) {
-          const interval = setInterval(() => {
-            if (accordion.offsetHeight > headerHeight) {
-              accordion.style.height = accordion.offsetHeight - 3 + 'px'
-            } else {
-              accordion.style.height = headerHeight + 'px'
-              clearInterval(interval)
-            }
-          }, 1)
+          accordion.style.height = headerHeight + contentHeight + 'px'
         } else {
-          const interval = setInterval(() => {
-            if (accordion.offsetHeight < headerHeight + contentHeight) {
-              accordion.style.height = accordion.offsetHeight + 3 + 'px'
-            } else {
-              accordion.style.height = headerHeight + contentHeight + 'px'
-              clearInterval(interval)
-            }
-          }, 1)
+          accordion.style.height = headerHeight + 'px'
         }
+
+        accordion.toggleAttribute('data-collapsed')
       })
     })
-
 })

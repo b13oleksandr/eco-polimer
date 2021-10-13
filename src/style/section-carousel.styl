@@ -4,11 +4,10 @@
     top 148px
     right 0
     @media screen and (max-width 1199px)
-      //top 100px
       right initial
       left 16px
-    //@media screen and (max-width 767px)
-    //  top 20px
+    @media screen and (max-width 767px)
+      top 100px
   &__content
     position relative
   &__desc
@@ -16,11 +15,16 @@
     font-size 17px
     line-height 21px
     margin-bottom 16px
+  @media screen and (max-width 767px)
+    color #fff
   &__title
     max-width 754px
     margin-bottom 56px
     @media screen and (max-width 1199px)
       margin-bottom 32px
+    @media screen and (max-width 767px)
+      padding-right 16px
+      color #fff
   &__nav
     position absolute
     right 0
@@ -33,12 +37,13 @@
   &__img-wrap
     position relative
     display inline-block
-    &::before
-      content ''
-      display block
-      position absolute
-      top 0
-      left 0
-      width 100%
-      height 100%
-      background rgba(0, 0, 0, 0.25)
+    @media screen and (max-width 767px)
+      &::before
+        content ''
+        display block
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        background rgba(0, 0, 0, 0.4)
