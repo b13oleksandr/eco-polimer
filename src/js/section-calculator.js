@@ -5,14 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const calculatorProfit = document.querySelector('.js-calculator-profit')
   const fieldsValues = {}
 
-  const calculatePotential = (lengthWaterfront, numberAreas, numberCemeteries, numberHospitals, numberParks, population) => {
-    // TODO
-    return lengthWaterfront + numberAreas + numberCemeteries + numberHospitals + numberParks + population
+  const calculatePotential = (population, numberAreas, numberParks, lengthWaterfront, numberCemeteries, numberHospitals) => {
+    return (+population / 1000) + (+numberAreas * 20) + (+numberParks * 3000) + (+lengthWaterfront * 1000) + (+numberCemeteries * 10000) + (+numberHospitals * 2500)
   }
 
-  const calculateProfit = (lengthWaterfront, numberAreas, numberCemeteries, numberHospitals, numberParks, population) => {
-    // TODO
-    return lengthWaterfront + numberAreas + numberCemeteries + numberHospitals + numberParks + population
+  const calculateProfit = (potential) => {
+    return potential * 20
   }
 
   const calculate = () => {
@@ -21,25 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     const potential = calculatePotential(
-      fieldsValues['length-waterfront'],
+      fieldsValues.population,
       fieldsValues['number-areas'],
+      fieldsValues['length-waterfront'],
       fieldsValues['number-cemeteries'],
       fieldsValues['number-hospitals'],
-      fieldsValues['number-parks'],
-      fieldsValues.population
+      fieldsValues['number-parks']
     )
 
-    const profit = calculatePotential(
-      fieldsValues['length-waterfront'],
-      fieldsValues['number-areas'],
-      fieldsValues['number-cemeteries'],
-      fieldsValues['number-hospitals'],
-      fieldsValues['number-parks'],
-      fieldsValues.population
-    )
+    const profit = calculateProfit(potential)
 
     calculatorPotential.textContent = potential
-    calculatorProfit.textContent = profit + ' ₴'
+    calculatorProfit.textContent = new Intl.NumberFormat('ru').format(profit) + ' ₴'
   }
 
   calculate()
