@@ -48,4 +48,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     r.addEventListener('change', calculate)
   })
+
+  fields.forEach(i => {
+    const id = i.id
+    const range = document.querySelector(`[data-field="${id}"]`)
+
+    if (!range) return
+
+    i.addEventListener('input', ({ target: { value } }) => {
+
+      let v = parseInt(value) || 0
+      const maxValue = parseInt(range.getAttribute('max'))
+      const minValue = parseInt(range.getAttribute('min'))
+
+      if (v > maxValue) {
+        value = maxValue
+        i.value = maxValue
+      }
+      if (v <= minValue) {
+        value = minValue
+        i.value = minValue
+      }
+
+      range.value = value
+      calculate()
+    })
+  })
 })
