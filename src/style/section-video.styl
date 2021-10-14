@@ -1,10 +1,10 @@
 .section-video
-  height 500px
+  height 700px
   background url('../statics/images/video/bg.png') center / cover
   position relative
   text-align center
   display flex
-  align-items flex-end
+  align-items center
   &::before
     content ''
     position absolute
@@ -15,7 +15,6 @@
     background-color: rgba(0, 0, 0, 0.4)
   &__content
     position relative
-    margin-bottom 115px
   &__title
     color #fff
   &__play
@@ -24,7 +23,10 @@
   &__wrap-video
     display none
     position relative
-    height 500px
+    height 700px
     justify-content center
+    width 100%
   &__video
+    width 100%
+    object-fit cover
     max-width 100%
