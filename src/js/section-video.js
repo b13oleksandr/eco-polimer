@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   playButton.addEventListener('click', () => {
     content.style.display = 'none'
     videoWrap.style.display = 'flex'
+    section.setAttribute('data-autoplay', 'true')
     video.play()
   })
 
@@ -19,7 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const callback = (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+      console.log()
+      if (section.dataset.autoplay === undefined && entry.isIntersecting) {
         playButton.click()
       } else {
         video.pause()
