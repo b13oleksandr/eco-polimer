@@ -1,5 +1,10 @@
 .section-gallery
+  display flex
+  @media screen and (max-width 767px)
+    flex-wrap wrap
   &__item
     transition .3s
+    @media screen and (max-width 767px)
+      width 50%
     &:hover
       transform scale(1.2)
