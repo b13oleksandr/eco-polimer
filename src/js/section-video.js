@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const callback = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        console.log('test')
         playButton.click()
       } else {
         video.pause()
