@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.js-pp-carousel', {
-    loop: true
+    loop: true,
+    autoplay: true,
   });
 
   const mainCarouselButtonPrev = document.querySelector('.js-pp-carousel-prev')
