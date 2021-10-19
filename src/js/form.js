@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function send(form, formData, callback) {
-    fetch('moooooo', {
+    fetch('../email.php', {
       method: 'post',
       body: formData
     }).then((response) => {
