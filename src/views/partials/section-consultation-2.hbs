@@ -9,25 +9,25 @@
       ласка форму, і наші фахівці передзвонять вам протягом 10 хвилин
     </div>
 
-    <div class="section-consultation__form">
+    <form class="section-consultation__form js-form">
       <div class="grid grid--gutter-16">
         <div class="col sc-768-3 section-consultation__col">
           <label for="consultation-name">
             Ваше ім’я
           </label>
-          <input class="text-field section-consultation__input" id="consultation-name" type="text">
+          <input class="text-field section-consultation__input" id="consultation-name" type="text" name="name">
         </div>
         <div class="col sc-768-3 section-consultation__col">
           <label for="consultation-email">
             Email
           </label>
-          <input class="text-field section-consultation__input" id="consultation-email" type="text">
+          <input class="text-field section-consultation__input" id="consultation-email" type="text" name="email">
         </div>
         <div class="col sc-768-3 section-consultation__col">
           <label for="consultation-phone">
             Телефон
           </label>
-          <input class="text-field section-consultation__input" id="consultation-phone" type="text" data-phone-mask>
+          <input class="text-field section-consultation__input" id="consultation-phone" type="text" data-phone-mask name="phone">
         </div>
         <div class="col sc-768-3 section-consultation__col">
           <button class="button section-consultation__button">
@@ -35,7 +35,7 @@
           </button>
         </div>
       </div>
-    </div>
+    </form>
 
     <div>
       Натискаючи кнопку — Ви даєте згоду на обробку ваших даних

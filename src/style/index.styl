@@ -201,11 +201,44 @@ input[type=range]::-ms-thumb
     &__item
       margin-bottom 8px
 
+.form-error
+  margin-top 12px
+  color #d94848
+
+.popup-success
+    width 400px
+    background #fff
+    padding 30px
+    &__title
+      font-size 37px
+      line-height 44px
+      margin-bottom 16px
+    &__description
+      font-size 20px
+      line-height 24px
+      margin-bottom 24px
+    &__button
+      width 100%
+
+.section-legal
+  background-color $color-primary
+  color #fff
+  font-size 15px
+  line-height 18px
+  padding-top 72px
+  padding-bottom 72px
+  @media (max-width 767px)
+    padding-top 40px
+    padding-bottom 40px
+    font-size 14px
+    line-height 17px
+
 
 @import "hamburger.styl"
 @import "contact-item.styl"
 @import "accordion.styl"
 @import "contacts-bar.styl"
+@import "popup.styl"
 
 @import "header.styl"
 @import "section-carousel.styl"
