@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const callback = (entries) => {
     entries.forEach((entry) => {
-      console.log()
       if (section.dataset.autoplay === undefined && entry.isIntersecting) {
         playButton.click()
       } else {

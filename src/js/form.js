@@ -13,9 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const formData = new FormData(form)
       const validation = validate(formData)
+      const { dataset: { type } } = form
 
       if (validation.isValid) {
-        send(form, formData, onSuccess)
+        send(form, formData, type === 'popup' ? onSuccessPopup.bind(form) : onSuccess)
       } else {
         showError(form, validation.message)
       }
@@ -25,6 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
   function onSuccess() {
     new Popup('.js-success-popup').show()
   }
+
+
+  function onSuccessPopup() {
+    this.querySelector('.js-form-wrap').style.display = 'none'
+    this.querySelector('.js-form-send').style.display = 'none'
+    this.querySelector('.js-success').style.display = 'block'
+  }
+
 
   function validate(formData) {
     let result = {

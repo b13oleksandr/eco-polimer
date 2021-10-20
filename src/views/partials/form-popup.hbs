@@ -1,0 +1,39 @@
+<div class="popup js-form-popup">
+  <div class="popup__window form-popup">
+    <img src="../../statics/images/close.svg" alt="" class="popup__close" data-close>
+    <div class="title popup__title form-popup__title" data-title></div>
+    <form class="js-form" data-type="popup">
+      <div class="grid grid--gutter-16 js-form-wrap">
+        <div class="col sc-768-4">
+          <label for="form-popup-name">
+            Ваше ім’я
+          </label>
+          <input class="text-field" id="form-popup-name" type="text" name="name">
+        </div>
+        <div class="col sc-768-4">
+          <label for="form-popup-email">
+            Email
+          </label>
+          <input class="text-field" id="form-popup-email" type="text" name="email">
+        </div>
+        <div class="col sc-768-4">
+          <label for="form-popup-phone">
+            Телефон
+          </label>
+          <input class="text-field" id="form-popup-phone" type="text" data-phone-mask name="phone">
+        </div>
+      </div>
+
+      <button class="button form-popup__send-button js-form-send">Відправити</button>
+
+      <div class="form-popup__success js-success">
+        <img src="../../statics/images/check.svg" alt="" class="form-popup__success-img">
+        <div class="form-popup__success-text">
+          Готово! Ми зв'яжимось з вами найближчим часом
+        </div>
+        <button class="popup-success__button button" data-close>Ок</button>
+      </div>
+    </form>
+
+  </div>
+</div>
