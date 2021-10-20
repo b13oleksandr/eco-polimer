@@ -1,12 +1,9 @@
 <?php
-if (isset($_POST['submit'])) {
-    $name = $_REQUEST['name'];
-    $email = $_REQUEST['email'];
-    $phone = $_REQUEST['phone'];
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
 
-    $to = $email;
-    $subject = 'Contact Request From Website';
-    $headers = $name." <".$email."> \r\n";
+$subject = 'Форма консультація фахівця';
+$headers = $name . " - " . $email ." - ". $phone . " \r\n";
 
-    mail($to, $subject, $headers);
-}
+mail('raptor.teh@gmail.com', $subject, $headers);

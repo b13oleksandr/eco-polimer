@@ -1,4 +1,4 @@
-import { Popup } from "./plugins/popup"
+import {Popup} from "./plugins/popup"
 
 document.addEventListener('DOMContentLoaded', () => {
   const PHONE_REGEX = /^\+380\s(\d{2})\s(\d{3})\s(\d{2})\s(\d{2})/
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
       method: 'post',
       body: formData
     }).then((response) => {
-      if (response.ok) {
+      if (!response.ok) {
         showError(form, 'Сталась помилка. Спробуйте ще раз')
         return
       }
@@ -70,6 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (callback && typeof callback === 'function') {
         callback()
       }
+
+      return response.text()
     })
   }
 
